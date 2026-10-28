@@ -29,7 +29,7 @@ When the server receives a MOVE request, several conditions are validated: the g
 
 For valid moves, the server places the token in the lowest available cell and checks for four consecutive tokens in horizontal, vertical, or diagonal patterns. It then determines whether the round should continue, end with a win, or end in a draw.
 
-## 3. Mermaid Sequence Diagram
+## Mermaid Sequence Diagram
 
 ```mermaid
 sequenceDiagram
@@ -82,7 +82,7 @@ sequenceDiagram
     end
 ```
 
-## 4. Move Validation, Turn Enforcement & State Broadcast Flow
+## Move Validation, Turn Enforcement & State Broadcast Flow
 
 When a client sends a `MOVE` request, the server first checks that the round remains active, verifies that the client owns the current turn, ensures the column is within range, and confirms that there is available space in the column. In cases where the move is invalid or made out of turn, the server promptly returns an `ERROR` message to the requesting client without altering the board or changing the active turn.
 
